@@ -1,0 +1,93 @@
+// -------------------------------
+//     TYPOGRAPHY VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+    $base__font-family: "Open Sans", Helvetica, Tahoma, sans-serif; // 400, 700
+    $base__font-size: 15px;
+    $base__font-weight: 400;
+    $base__font-weight--bold: 700;
+
+    $secondary__font-family: "Dosis", Arial, sans-serif; // 400, 700
+
+    $heading__font-size--small: 18px;
+    $heading__font-size--medium: 24px;
+    $heading__font-size--large: 30px;
+    $heading__font-size--x-large: 36px;
+
+    $rte__font-size: 14px;
+    $rte__line-height: 24px;
+
+    // *--------- COLORS ---------*
+    $base__text-color: #000;
+    $highlighted__background-color: #F8BBC6;
+
+// -------------------------------
+//     TYPOGRAPHY STYLES
+// -------------------------------
+
+    @include comment("typography");
+
+    // *--------- GENERAL ---------*
+    body {
+        font: $base__font-weight #{$base__font-size}/1 $base__font-family;
+        color: $base__text-color;
+    }
+
+    strong {
+        font-weight: $base__font-weight--bold;
+    }
+
+    a {
+        @extend %transitionColor;
+    }
+
+    .upcase {
+        text-transform: uppercase;
+    }
+
+    .italic {
+        font-style: italic;
+        color: lighten($base__text-color, 50);
+    }
+
+    .highlighted {
+        background-color: $highlighted__background-color;
+        margin-bottom: 2px;
+    }
+
+    .no-wrap {
+        white-space: nowrap;
+    }
+
+    .more {
+        display: none;
+    }
+
+    // *--------- HEADINGS ---------*
+    .heading,
+    .rte h1, .rte h2, .rte h3, .rte h4, .rte h5, .rte h6 {
+        font-family: $secondary__font-family;
+        font-weight: $base__font-weight--bold;
+        text-transform: uppercase;
+    }
+
+        .heading--small,
+        .rte h4 {
+            font-size: $heading__font-size--small;
+        }
+
+        .heading--medium,
+        .rte h3 {
+            font-size: $heading__font-size--medium;
+        }
+
+        .heading--large,
+        .rte h2 {
+            font-size: $heading__font-size--large;
+        }
+
+        .heading--x-large,
+        .rte h1 {
+            font-size: $heading__font-size--x-large;
+        }

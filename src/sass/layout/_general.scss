@@ -1,0 +1,85 @@
+// -------------------------------
+//     GENERAL VARIABLES
+// -------------------------------
+
+    // *--------- METRICS ---------*
+    $container__width: 1240px;
+    $container__width--inner: 1170px;
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+
+// ----------------------------
+//     GENERAL STYLES
+// ----------------------------
+
+@include comment("general");
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: $base__background-color url(../images/header_bg.jpg) center top no-repeat;
+
+    &.home {
+        background-image: none;
+    }
+}
+
+.container {
+    width: $container__width;
+    margin: 0 auto;
+    background-color: $base__background-color;
+
+    @extend %clearfix;
+}
+
+.center-content {
+    width: $container__width--inner;
+    margin: 0 auto;
+
+    @extend %clearfix;
+}
+
+.col {
+    @extend %clearfix;
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right
+    }
+
+    &--25 {
+        width: 25%;
+    }
+
+    &--70 {
+        width: 70%;
+    }
+
+    &--75 {
+        width: 75%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.not-visible {
+    opacity: 0;
+
+    @extend %transitionAll;
+}
+
+.visible {
+    opacity: 1;
+
+    @extend %transitionAll;
+}

@@ -1,0 +1,88 @@
+// -------------------------------
+//     FORMS VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+    $form-field__font-size: 14px;
+
+    // *--------- COLORS ---------*
+    $form-field__text-color: #000;
+    $form-field__border-color: #eaeaea;
+    $form-field__background-color: #fff;
+
+// -------------------------------
+//     FORMS STYLES
+// -------------------------------
+
+@include comment("forms");
+
+.form-fieldset {
+    margin-bottom: 20px;
+
+    &--left,
+    &--right {
+        width: calc(50% - 10px);
+    }
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right;
+    }
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: $secondary__font-family;
+    font-size: 16px;
+    font-weight: $base__font-weight--bold;
+    text-transform: uppercase;
+
+    &--inline {
+        display: inline-block;
+        margin: 15px 10px 15px 0;
+    }
+
+    &__required {
+        color: $special__text-color;
+    }
+}
+
+.form-field {
+    width: 100%;
+    padding: 0 20px;
+    height: 50px;
+    border: 2px $form-field__border-color solid;
+    background-color: $form-field__background-color;
+
+    font: $base__font-weight #{$form-field__font-size}/50px $base__font-family;
+    color: $form-field__text-color;
+
+    &--textarea {
+        height: 170px;
+        padding-top: 15px;
+
+        resize: none;
+
+        line-height: 26px;
+    }
+
+    &--small {
+        height: 40px;
+        border-width: 1px;
+
+        line-height: 40px;
+    }
+
+    &--rounded {
+        border-radius: 30px;
+    }
+
+    &--invalid {
+        border-color: #ff9ab6;
+    }
+}

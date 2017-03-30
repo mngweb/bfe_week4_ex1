@@ -1,0 +1,57 @@
+// -------------------------------
+//     LIGHTBOX VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+    $lightbox-overlay__background-color: rgba(#000, 0.7);
+    $lightbox__background-color: #fff;
+
+// -------------------------------
+//     LIGHTBOX STYLES
+// -------------------------------
+
+@include comment("lightbox");
+
+.lightbox-overlay {
+    display: none;
+    background-color: $lightbox-overlay__background-color;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.lightbox {
+    display: none;
+    background: $lightbox__background-color url(../images/ajax-loader.gif) center center no-repeat;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+
+    &__close {
+        display: inline-block;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10001;
+
+        cursor: pointer;
+
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 20px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: $lightbox__background-color;
+
+        &:after {
+            content: "\f00d";
+        }
+    }
+}

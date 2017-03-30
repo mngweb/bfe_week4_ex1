@@ -1,0 +1,45 @@
+// -------------------------------
+//     FOOTER VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+    $footer-text__font-size: 16px;
+
+    // *--------- COLORS ---------*
+    $footer-text__text-color: #fff;
+    $footer__background-color: #212121;
+
+// ----------------------------
+//     FOOTER STYLES
+// ----------------------------
+
+@include comment("footer");
+
+.footer {
+    border-bottom: 3px $special__background-color solid;
+    background-color: $footer__background-color;
+
+    &__copyright {
+        padding: 30px 0;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+
+        font-family: $secondary__font-family;
+        font-size: $footer-text__font-size;
+        text-align: center;
+        color: $footer-text__text-color;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__social {
+        padding: 25px 0;
+        background-color: $special__background-color;
+
+        text-align: center;
+    }
+}

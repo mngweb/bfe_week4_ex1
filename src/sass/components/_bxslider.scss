@@ -1,0 +1,87 @@
+// -------------------------------
+//     SLIDER VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+    $slider-pager-item__background-color: #fff;
+
+// ----------------------------
+//     SLIDER STYLES
+// ----------------------------
+
+@include comment("bx slider");
+
+.bx-wrapper {
+    padding: 0;
+    margin: 0 auto;
+
+    position: relative;
+    *zoom: 1;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .bx-viewport {
+        @include transform(translatez(0));
+    }
+
+    .bx-pager,
+    .bx-controls-auto {
+        width: 100%;
+
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .bx-loading {
+        width: 100%;
+        height: 100%;
+        min-height: 50px;
+        background: url(../images/ajax-loader.gif) center center no-repeat;
+        background-size: 52px;;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+    }
+
+    .bx-pager {
+        width: 100%;
+
+        position: absolute;
+        bottom: 170px;
+        left: 0;
+        z-index: 10000;
+
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+    }
+
+        .bx-pager-item {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 8px;
+
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $slider-pager-item__background-color;
+
+                @extend %transitionAll;
+
+                &:hover,
+                &.active {
+                    background-color: $special__background-color;
+                }
+            }
+        }
+}

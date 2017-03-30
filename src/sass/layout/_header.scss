@@ -1,0 +1,58 @@
+// -------------------------------
+//     HEADER VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+
+// ----------------------------
+//     HEADER STYLES
+// ----------------------------
+
+@include comment("header");
+
+.header {
+    height: 265px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+
+    position: relative;
+    z-index: 2;
+
+    .home & {
+        margin-bottom: 610px;
+    }
+
+    &__logo {
+        display: block;
+        width: 151px;
+        height: 61px;
+        margin-left: -75px;
+        background: url(../images/logo.png) 0 0 no-repeat;
+
+        position: absolute;
+        top: 75px;
+        left: 50%;
+
+        font-size: 0;
+        line-height: 0;
+    }
+
+    &__social {
+        margin-top: 75px;
+        float: left;
+    }
+
+    &__search {
+        margin-top: 75px;
+        float: right;
+    }
+
+        &__search-field {
+            padding-right: 45px;
+            background-image: url(../images/search_icon.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+}
